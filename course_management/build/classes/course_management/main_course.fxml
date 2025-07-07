@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course_management.Main_courseController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="806.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="course_management.Main_courseController">
+   <children>
+      <TableView layoutX="25.0" layoutY="56.0" prefHeight="414.0" prefWidth="771.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="NO." />
+          <TableColumn prefWidth="75.0" text="SEMESTER" />
+            <TableColumn prefWidth="150.0" text="COURSE CODE" />
+            <TableColumn prefWidth="150.0" text="FF" />
+            <TableColumn prefWidth="75.0" text="NAME" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
