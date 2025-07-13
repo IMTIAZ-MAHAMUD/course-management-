@@ -1,20 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="806.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="course_management.Main_courseController">
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course_management.Main_courseController">
    <children>
-      <TableView layoutX="25.0" layoutY="56.0" prefHeight="414.0" prefWidth="771.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="NO." />
-          <TableColumn prefWidth="75.0" text="SEMESTER" />
-            <TableColumn prefWidth="150.0" text="COURSE CODE" />
-            <TableColumn prefWidth="150.0" text="FF" />
-            <TableColumn prefWidth="75.0" text="NAME" />
-        </columns>
-      </TableView>
+      <HBox layoutX="2.0" layoutY="3.0" prefHeight="684.0" prefWidth="914.0">
+         <children>
+            <VBox prefHeight="688.0" prefWidth="234.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="141.0" fitWidth="190.0" layoutX="39.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/images.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Home">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Profile">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Course Curiculm">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="280.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Course Registration">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="351.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="change password">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="421.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="log out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane prefHeight="684.0" prefWidth="703.0">
+               <children>
+                  <Pane prefHeight="54.0" prefWidth="692.0" style="-fx-background-color: black;" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
