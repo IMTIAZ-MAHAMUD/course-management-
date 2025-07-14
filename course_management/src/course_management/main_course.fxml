@@ -59,10 +59,15 @@
             <Pane prefHeight="684.0" prefWidth="703.0">
                <children>
                   <Pane prefHeight="54.0" prefWidth="692.0" style="-fx-background-color: black;" />
-                  <ImageView fitHeight="237.0" fitWidth="683.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="255.0" fitWidth="689.0" layoutX="2.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/1.png" />
                      </image></ImageView>
+                  <ImageView fitHeight="283.0" fitWidth="692.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/2.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>
