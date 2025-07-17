@@ -20,6 +20,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -42,6 +45,8 @@ public class FXMLDocumentController implements Initializable {
     private Label usr1;
     @FXML
     private Label pss1;
+    @FXML
+    private Label warn;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -57,16 +62,45 @@ public class FXMLDocumentController implements Initializable {
     private void loginto(ActionEvent event) throws IOException {
         
         
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Main_course.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
-        
-        Window window = ((Node) event.getSource()).getScene().getWindow();
-        window.hide();
+         String username = u1.getText();
+    String pass = p1.getText();
+
+    if (username.isEmpty() || pass.isEmpty()) {
+        warn.setText("Please enter username and password.");
+        return;
+    }
+
+    String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+    try (Connection conn = DBConnection.getConnection();
+         java.sql.PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+        stmt.setString(1, username);
+        stmt.setString(2, pass);
+
+        java.sql.ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            // User authenticated
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("Main_course.fxml"));
+
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+
+            Window window = ((Node) event.getSource()).getScene().getWindow();
+            window.hide();
+
+        } else {
+            warn.setText("Invalid username or password");
+        }
+
+    } catch (Exception e) {
+        warn.setText("Error: " + e.getMessage());
+        e.printStackTrace();
+    }
         
         
     }

@@ -20,6 +20,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  * FXML Controller class
@@ -42,6 +45,8 @@ public class SignupController implements Initializable {
     private PasswordField password;
     @FXML
     private TextField email;
+    @FXML
+    private Label warn2;
 
     /**
      * Initializes the controller class.
@@ -53,6 +58,41 @@ public class SignupController implements Initializable {
 
     @FXML
     private void signup(ActionEvent event) {
+        
+         String username = usrname.getText();
+    String emailVal = email.getText();
+    String pass = password.getText();
+
+    if (username.isEmpty() || emailVal.isEmpty() || pass.isEmpty()) {
+        warn2.setText("Please fill all fields");
+        return;
+    }
+
+    // You should hash the password in production; for simplicity, store as plain text (not recommended)
+
+    String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+
+    try (Connection conn = DBConnection.getConnection();
+         java.sql.PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+        stmt.setString(1, username);
+        stmt.setString(2, emailVal);
+        stmt.setString(3, pass);
+
+        int rowsInserted = stmt.executeUpdate();
+        if (rowsInserted > 0) {
+            warn2.setText("Signup successful! Please login.");
+        } else {
+            warn2.setText("Signup failed. Try again.");
+        }
+
+    } catch (java.sql.SQLIntegrityConstraintViolationException e) {
+        warn2.setText("Username already exists.");
+    } catch (Exception e) {
+        warn2.setText("Error: " + e.getMessage());
+        e.printStackTrace();
+    }
+        
     }
 
     @FXML

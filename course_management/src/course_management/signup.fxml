@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course_management.SignupController">
      <children>
-        <Button fx:id="l1" layoutX="309.0" layoutY="379.0" onAction="#signup" text="Signup" textFill="#e10808">
+        <Button fx:id="l1" layoutX="311.0" layoutY="367.0" onAction="#signup" text="Signup" textFill="#e10808">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
@@ -43,6 +43,7 @@
             <Image url="@img/images.png" />
          </image>
       </ImageView>
+      <Label fx:id="warn2" alignment="CENTER" layoutX="215.0" layoutY="405.0" prefHeight="18.0" prefWidth="259.0" />
       
     </children>
 </AnchorPane>

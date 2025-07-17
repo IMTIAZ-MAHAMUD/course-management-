@@ -105,7 +105,7 @@ public class Main_courseController implements Initializable {
     @FXML
     private void logout(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Main_course.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         
