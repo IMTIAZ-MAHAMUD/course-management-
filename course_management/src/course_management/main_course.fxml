@@ -34,7 +34,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="ccbtn" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#cc" prefHeight="70.0" prefWidth="246.0" text="Course Curiculm">
+                  <Button fx:id="ccbtn" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#cc" prefHeight="70.0" prefWidth="246.0" text="Course Curriculum">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
