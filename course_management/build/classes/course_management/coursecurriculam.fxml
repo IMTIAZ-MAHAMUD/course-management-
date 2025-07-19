@@ -26,32 +26,67 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Home">
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-background-color: white; -fx-border-color: black;" text="Home">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Profile">
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-border-color: black;" text="Profile">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="269.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Course Curriculum">
+                  <Button layoutX="10.0" layoutY="269.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-border-color: black;" text="Course Curriculum">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="328.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Course Registrstion">
+                  <Button layoutX="10.0" layoutY="328.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-border-color: black;" text="Course Registrstion">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/reg1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="388.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Change Password">
+                  <Button layoutX="10.0" layoutY="388.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-border-color: black;" text="Change Password">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/key1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Log out">
+                  <Button layoutX="10.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" style="-fx-border-color: black;" text="Log out">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -61,14 +96,13 @@
             <Pane prefHeight="594.0" prefWidth="681.0">
                <children>
                   <Pane layoutY="2.0" prefHeight="40.0" prefWidth="662.0" style="-fx-background-color: black;" />
-                  <TableView fx:id="courseTable" layoutX="-1.0" layoutY="42.0" prefHeight="550.0" prefWidth="662.0">
+                  <TableView fx:id="courseTable" layoutX="-1.0" layoutY="42.0" prefHeight="555.0" prefWidth="662.0" style="-fx-background-color: #c7cef5; -fx-border-color: black;">
                     <columns>
                       <TableColumn fx:id="noColumn" prefWidth="65.0" text="No." />
                       <TableColumn fx:id="semesterColumn" prefWidth="75.0" text="Semester" />
                         <TableColumn fx:id="nameColumn" prefWidth="320.0" text="Course Name" />
                         <TableColumn fx:id="creditColumn" prefWidth="100.0" text="Creadit" />
-                        <TableColumn fx:id="codeColumn" prefWidth="100.0" text="Course Code" />
-                        <TableColumn prefWidth="75.0" text="Column X" />
+                        <TableColumn fx:id="codeColumn" prefWidth="98.0" text="Course Code" />
                     </columns>
                   </TableView>
                </children>

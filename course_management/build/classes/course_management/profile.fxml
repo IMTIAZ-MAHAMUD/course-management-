@@ -24,39 +24,73 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Home">
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="68.0" prefWidth="199.0" text="Home">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/home.png" />
+                           </image></ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="180.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Profile">
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="180.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Profile">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="255.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Course Curriculum">
+                  <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="255.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Course Curriculum">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="329.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Course Regestration">
+                  <Button alignment="TOP_RIGHT" layoutX="10.0" layoutY="329.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Course Regestration">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/reg1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="404.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Change password">
+                  <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="404.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" text="Change password">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/key1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="10.0" layoutY="478.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="203.0" text="Log out">
+                  <Button layoutX="10.0" layoutY="478.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="203.0" text="Log out" textFill="#ef0000">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
                </children>
             </VBox>
-            <Pane prefHeight="674.0" prefWidth="717.0">
+            <Pane prefHeight="674.0" prefWidth="717.0" style="-fx-background-color: #c7cef5;">
                <children>
                   <Pane prefHeight="56.0" prefWidth="716.0" style="-fx-background-color: black;" />
                </children>
