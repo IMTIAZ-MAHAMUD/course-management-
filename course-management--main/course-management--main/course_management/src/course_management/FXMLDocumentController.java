@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
- */
 package course_management;
 
 import java.io.IOException;
@@ -21,16 +17,10 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author USER
- */
 public class FXMLDocumentController implements Initializable {
     
-    private Label label;
     @FXML
     private Button l1;
     @FXML
@@ -48,11 +38,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label warn;
     
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -60,68 +45,67 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void loginto(ActionEvent event) throws IOException {
-        
-        
-         String username = u1.getText();
-    String pass = p1.getText();
+        String username = u1.getText();
+        String pass = p1.getText();
 
-    if (username.isEmpty() || pass.isEmpty()) {
-        warn.setText("Please enter username and password.");
-        return;
-    }
-
-    String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
-
-    try (Connection conn = DBConnection.getConnection();
-         java.sql.PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-        stmt.setString(1, username);
-        stmt.setString(2, pass);
-
-        java.sql.ResultSet rs = stmt.executeQuery();
-
-        if (rs.next()) {
-            // User authenticated
-            Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Main_course.fxml"));
-
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-
-            Window window = ((Node) event.getSource()).getScene().getWindow();
-            window.hide();
-
-        } else {
-            warn.setText("Invalid username or password");
+        if (username.isEmpty() || pass.isEmpty()) {
+            warn.setText("Please enter username and password.");
+            return;
         }
 
-    } catch (Exception e) {
-        warn.setText("Error: " + e.getMessage());
-        e.printStackTrace();
-    }
-        
-        
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             java.sql.PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, username);
+            stmt.setString(2, pass);
+
+            java.sql.ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                // User authenticated
+
+                // Get user id from DB (adjust column name if needed)
+                int userId = rs.getInt("id");
+
+                // Set the static currentUserId in registration controller
+                CourseregistrationController.currentUserId = userId;
+
+                // Load main course UI
+                Stage stage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("Main_course.fxml"));
+
+                Scene scene = new Scene(root);
+
+                stage.setScene(scene);
+                stage.show();
+
+                // Close login window
+                Window window = ((Node) event.getSource()).getScene().getWindow();
+                window.hide();
+
+            } else {
+                warn.setText("Invalid username or password");
+            }
+
+        } catch (SQLException e) {
+            warn.setText("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @FXML
     private void signuphere(ActionEvent event) throws IOException {
-        
-        
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("signup.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.show();
-        
+
         Window window = ((Node) event.getSource()).getScene().getWindow();
         window.hide();
-        
-        
-        
     }
-    
 }

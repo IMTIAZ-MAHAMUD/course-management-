@@ -1,5 +1,6 @@
 package course_management;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,11 +9,19 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class CoursecurriculamController implements Initializable {
 
@@ -30,6 +39,18 @@ public class CoursecurriculamController implements Initializable {
     private TableColumn<Course, String> codeColumn;
 
     private ObservableList<Course> courseList = FXCollections.observableArrayList();
+    @FXML
+    private Button home2;
+    @FXML
+    private Button profile2;
+    @FXML
+    private Button coursecurriculum2;
+    @FXML
+    private Button cr2;
+    @FXML
+    private Button cp2;
+    @FXML
+    private Button log2;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -72,5 +93,89 @@ public class CoursecurriculamController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void homeh2(ActionEvent event) throws IOException {
+          Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("main_course.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
+    }
+
+    @FXML
+    private void profilep2(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("profile.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
+    }
+
+    @FXML
+    private void coursrcurriculumc2(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("coursecurriculam.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
+    }
+
+    @FXML
+    private void crc2(ActionEvent event) throws IOException {
+    Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("courseregistration.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
+    }
+
+    @FXML
+    private void cpcp2(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("changepassword.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
+    }
+
+    @FXML
+    private void logout2(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        Window window = ((Node) event.getSource()).getScene().getWindow();
+        window.hide();
     }
 }

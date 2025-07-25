@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course_management.SignupController">
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="600.0" style="-fx-background-color: #c7cef5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course_management.SignupController">
      <children>
         <Button fx:id="l1" layoutX="311.0" layoutY="367.0" onAction="#signup" text="Signup" textFill="#e10808">
          <font>
