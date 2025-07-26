@@ -94,18 +94,21 @@
             <Pane prefHeight="684.0" prefWidth="703.0" style="-fx-background-color: #c7cef5;">
                <children>
                   <Pane prefHeight="54.0" prefWidth="692.0" style="-fx-background-color: black;" />
-                  <ImageView fitHeight="255.0" fitWidth="689.0" layoutX="2.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/1.png" />
-                     </image></ImageView>
-                  <ImageView fitHeight="283.0" fitWidth="692.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/2.png" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane fx:id="forslider" layoutX="39.0" layoutY="61.0" prefHeight="200.0" prefWidth="606.0">
+                     <children>
+                        <Pane fx:id="slidingPane" prefHeight="200.0" prefWidth="606.0" style="-fx-background-color: #336699;">
+                           <children>
+                              <ImageView fx:id="sliderImage" fitHeight="200.0" fitWidth="600" layoutX="0" layoutY="0" preserveRatio="true" />
+                           </children>
+          </Pane>
+                     </children></AnchorPane>
+
                </children>
+               
             </Pane>
+            
          </children>
+         
       </HBox>
    </children>
 </AnchorPane>
