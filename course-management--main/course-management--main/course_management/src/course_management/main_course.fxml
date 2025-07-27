@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -98,10 +99,40 @@
                      <children>
                         <Pane fx:id="slidingPane" prefHeight="200.0" prefWidth="606.0" style="-fx-background-color: #336699;">
                            <children>
-                              <ImageView fx:id="sliderImage" fitHeight="200.0" fitWidth="600" layoutX="0" layoutY="0" preserveRatio="true" />
+                              <ImageView fx:id="sliderImage" fitHeight="200.0" fitWidth="606.0" layoutX="0" layoutY="0" preserveRatio="true" />
                            </children>
           </Pane>
                      </children></AnchorPane>
+                  <Label layoutX="56.0" layoutY="307.0" prefHeight="33.0" prefWidth="101.0" text="Notice-" textFill="#e74c4c">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="354.0" prefHeight="33.0" prefWidth="435.0" text="--&gt; Campus will be colse on 5 aug 25 due to Milestone tragedy.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="395.0" prefHeight="33.0" prefWidth="435.0" text="--&gt; Final exam will be held on 1st week of August.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="439.0" prefHeight="33.0" prefWidth="453.0" text="--&gt; Entry to campus will be denied to students without an ID card.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="480.0" prefHeight="33.0" prefWidth="453.0" text="--&gt; Less than 60% attendance will not be allowed for the exam.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="525.0" prefHeight="33.0" prefWidth="453.0" text="--&gt; Political activities are strictly banned on campus.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
 
                </children>
                

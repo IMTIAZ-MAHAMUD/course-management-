@@ -39,6 +39,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -68,6 +69,10 @@ public class Main_courseController implements Initializable {
 
     private ArrayList<Image> images;
     private int index = 0;
+    @FXML
+    private AnchorPane forslider;
+    @FXML
+    private Pane slidingPane;
     /**
      * Initializes the controller class.
      */
